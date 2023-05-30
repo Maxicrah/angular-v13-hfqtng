@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IpInfoService } from 'src/app/ip-info.service';
+import { IpInfoService } from '../ip-info.service';
 
 @Component({
   selector: 'app-ip-info',
