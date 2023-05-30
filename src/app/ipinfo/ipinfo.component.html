@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Buscar información de IP</h2>
+  <form (ngSubmit)="searchIp()">
+    <div class="form-group">
+      <label for="ipInput">IP:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ipInput"
+        [(ngModel)]="ipAddress"
+        name="ipAddress"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+
+  <div class="card mt-4" *ngIf="ipInfo">
+    <div class="card-body">
+      <h5 class="card-title">Información de IP</h5>
+      <p class="card-text">IP: {{ ipInfo.ip }}</p>
+      <p class="card-text">País: {{ ipInfo.country }}</p>
+      <p class="card-text">Región: {{ ipInfo.region }}</p>
+      <p class="card-text">Ciudad: {{ ipInfo.city }}</p>
+      <p class="card-text">ISP: {{ ipInfo.isp }}</p>
+    </div>
+  </div>
+</div>
